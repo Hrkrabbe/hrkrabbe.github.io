@@ -1,0 +1,69 @@
+/* style.css */
+body {
+    font-family: Arial, sans-serif;
+    text-align: center;
+    padding: 50px;
+    #background: linear-gradient(to bottom right, #f0f0f0, #e0e0e0);
+    background: linear-gradient(to bottom, #b8917b, #61493b);
+    height: 100vh;  /* Ensure the gradient covers the full height of the viewport */
+}
+
+p {
+    margin-top: 0px;
+    margin-bottom: 0px;
+}
+
+.container {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.details {
+    text-align: left;
+    padding: 0px;
+    margin-top: 0px;
+    margin-bottom: 0px;
+    font-size: 1.5rem;
+}
+
+.speedometer {
+    position: relative;
+    width: 20rem;
+    height: 10rem;
+    border-radius: 10rem 10rem 0 0;
+    background: conic-gradient(from -180deg at 50% 100%, green, lightgreen 40%, yellow 50%, orange 60%, red);
+    border: 10px solid #333;
+    margin-bottom: 20px;
+}
+
+.needle {
+    position: absolute;
+    top: 1.5rem;
+    left: 9.5rem;
+    width: 0.5rem;
+    height: 8.5rem;
+    border: 0.1rem solid black;
+    border-radius: 4rem 4rem 0.75rem 0.75rem;
+    background-color: red;
+    transform-origin: bottom;
+    transform: rotate(0deg);
+    transition: transform 1.5s ease;
+}
+
+.labels {
+    display: flex;
+    justify-content: space-between;
+    width: 100%;
+    padding: 10px;
+}
+
+.label {
+    font-weight: bold;
+}
+
+input[type="range"] {
+    width: 80%;
+    max-width: 400px;
+}
+
