@@ -15,6 +15,14 @@ function updateNeedlePosition(value) {
     //riskValue.innerText = value;
 }
 
+function updateNeedlePosition2() {
+      // Map the value (0-100) to an angle (e.g., -135 to 135 degrees)
+    //const angle = (value / 100) * 270 - 135; // Mapping 0-100 to -135 to 135 degrees
+    const angle = 275;
+    needle.style.transform = `rotate(${angle}deg)`;
+    //riskValue.innerText = value;
+}
+
 function updatePrice() { 
     getCryptoPrice().then( result => { 
         priceElem.innerText = `$${result}`;
@@ -22,7 +30,8 @@ function updatePrice() {
 }
 
 // Initialize with the default value
-updateNeedlePosition(riskValue);
+//updateNeedlePosition(riskValue);
+updateNeedlePosition2();
 updatePrice();
 
 // Event listener for range input
